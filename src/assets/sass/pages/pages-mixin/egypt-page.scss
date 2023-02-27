@@ -1,0 +1,98 @@
+@import "./mixins-page.scss";
+
+// تنسيق الوان الجزء العلوي والسلفي من الصفحة
+$pageNavAndFooter :#D7E9B9;
+
+// تنسيق الوان الخلفية للاقسام
+$pageBackground-color : #FFFBAC;
+
+// تنتسيق لون العنواين
+$pageTitle-color : #FAAB78;
+
+// تنسيق لون الزر 
+$btn-color :#9f826d;
+$btn-hover :#f8ddca;
+
+// تنسيق الوان الكروت
+$pageCard : #D7E9B9 ;
+
+
+.egypt {
+    .transport {
+        @include head($pageNavAndFooter);
+
+
+        .a { 
+            @include minLinks($pageNavAndFooter ,$btn-hover);
+        }
+        .span{
+            @include spanInHeader(black);
+         }
+
+    }
+    .accordion {
+        .card {
+            @include card($pageBackground-color)
+        }
+    }
+    .info {
+        @include info($pageBackground-color);
+
+
+        .desc {
+            @include desc();
+        }
+    }
+
+
+    .gallery {
+        @include gallery( $pageBackground-color);
+        .close {
+            @include close;
+          }
+          
+          .col-12 img {
+            @include img;
+          }
+          
+          .col-12 img:hover {
+            @include imgHover;
+        }
+
+          .modal {
+            @include modal;
+          }
+    }
+    .contact {
+        @include contact($pageNavAndFooter);
+    
+        .title {
+            @include title($btn-color)
+        }
+    
+        .title-of-iframe {
+            @include title-of-iframe($btn-color);
+        }
+    
+        iframe{
+           @include iframe;
+        }
+    
+        .contact-style {
+            @include contact-style;
+        }
+    
+        .cont {
+            @include cont($btn-color);
+        }
+    
+        .social {
+           @include social ;
+    
+           .a-social{
+            @include a-social($btn-color ,$btn-hover);
+        }
+        }
+    }
+}
+

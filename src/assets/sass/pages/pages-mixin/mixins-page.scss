@@ -1,0 +1,134 @@
+@mixin head($background-color) {
+    width: 100%;
+    padding: 20px 20px ;
+    background-color:$background-color;
+}
+
+@mixin minLinks ($background-color ,$btn-hover) {
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+
+    color: $pageBackground-color;
+
+    &:hover,
+    &:active {
+        color: $pageBackground-color;
+        background-color: $btn-hover;
+    }
+
+}
+
+@mixin spanInHeader($color) {
+    margin-right: 20px;
+    color: $color;
+}
+
+@mixin card($pageBackground-color){
+    background-color: $pageBackground-color ;
+}
+
+@mixin info($pageBackground-color) {
+    border-bottom: 1px solid #D0C9C0  ;
+    background-color: $pageBackground-color ;
+}
+
+@mixin desc {
+    margin-bottom: 20px;
+}
+
+@mixin gallery($pageBackground-color){
+    background-color: $pageBackground-color;
+}
+
+@mixin close {
+    font-size: 1.5rem;
+}
+
+@mixin img {
+    cursor: pointer;
+    width: 100%;
+}
+
+@mixin imgHover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@mixin modal{
+    top: 10% ;
+}
+
+@mixin contact($pageNavAndFooter){
+    background-color: $pageNavAndFooter;
+}
+
+
+@mixin title ($btn-color) {
+    padding: 20px;
+    color: $btn-color;
+}
+
+@mixin title-of-iframe($btn-color) {
+    padding: 10px;
+    color: $btn-color;
+}
+
+@mixin iframe{
+    width: 100%;
+    height: 200px;
+    border: 1px solid ;
+}
+
+@mixin contact-style{
+    display: flex;
+    align-items: center;
+}
+
+@mixin cont($btn-color) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $card  ;
+    color: $btn-color;
+}
+
+@mixin social {
+    padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+@mixin a-social($btn-color ,$btn-hover) {
+    padding: 7px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.8s ease;
+    color: $btn-color;
+
+    &:hover{
+      color:   $btn-hover;
+      background-color: $btn-color;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 700px !important;
+        margin: 1.75rem auto;
+    }
+}
+    
+    @media (max-width: 576px) {
+        .project-details {  
+            .thumb {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+
+    }
